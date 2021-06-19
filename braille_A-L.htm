@@ -1,0 +1,26 @@
+﻿<html xml:lang="cs" xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+  <title>Fort Mills Braille A-L</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style/layout.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="style/layout.css"/>
+
+  <script type="text/javascript" src="js/drawBraille.js"></script>
+
+  <script>
+    function drawIt() {
+      var canvas = document.getElementById("myCanvas")
+      drawPage("ABCDEFGHIJKL".split(""), canvas)
+    }
+  </script>
+</head>
+
+<body style="position:absolute" onload="drawIt()">
+
+<img id="img-background" src="background.png" width="262px" height="494px">
+
+ <canvas id="myCanvas" width="1050" height="1485" style="position:absolute; left:0px; top:0px"></canvas>
+
+</body>
+
+</html>
