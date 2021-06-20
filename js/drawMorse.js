@@ -4,7 +4,7 @@ var GLOB = {
   cardWidth: 1050/4,
   cardHeight: 1485/3,
   netStyleDash: [5, 15],
-  morse1: {
+  morseOriginal: {
     A : [".-", "AKÁT"],
     B : ["-...", "BLÝSKAVICE"],
     C : ["-.-.", "CÍLOVNÍCI"],
@@ -114,9 +114,9 @@ function drawCard(letter, n, ctx) {
   ctx.font = "bold 32px Arial";
   let mnemo = GLOB.morse[letter][1]
   let textWidth = GLOB.cardWidth
-  let fontPx = 34
+  let fontPx = 36
   while (textWidth > 0.95 * GLOB.cardWidth) {
-    fontPx -= 2
+    fontPx -= 1
     ctx.font = "bold " + fontPx + "px Arial";
     textWidth = ctx.measureText(mnemo).width
   }
