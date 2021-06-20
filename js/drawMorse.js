@@ -65,37 +65,6 @@ var GLOB = {
   }
 }
 
-function drawCardNet(cardInfo, ctx) {
-  function drawVerticals() {
-    let x0 = cardInfo.x
-    let y0 = cardInfo.y
-    let y1 = cardInfo.y + 1.5 * cardInfo.width // note, we want it Squarish
-    let xShift = cardInfo.width / 2
-    for (let x = 1; x < 2; x++) {
-      ctx.beginPath();
-      ctx.setLineDash(GLOB.netStyleDash);
-      ctx.moveTo(x0 + x * xShift, y0);
-      ctx.lineTo(x0 + x * xShift, y1);
-      ctx.stroke();
-    }
-  }
-  function drawHorizontals() {
-    let x0 = cardInfo.x
-    let y0 = cardInfo.y
-    let x1 = cardInfo.x + cardInfo.width
-    let yShift = cardInfo.width / 2  // note, the same as in vertical, to make it squarish
-    for (let y = 1; y<=2; y++) {
-      ctx.beginPath();
-      ctx.setLineDash(GLOB.netStyleDash);
-      ctx.moveTo(x0, y0 + y * yShift);
-      ctx.lineTo(x1, y0 + y * yShift);
-      ctx.stroke();
-    }
-  }
-  drawVerticals()
-  drawHorizontals()
-}
-
 // draw given letter on the n-th order, so for n=0..3 it is at the first row, 4..7 second and 8..11 third row
 function drawCard(letter, n, ctx) {
   let x = n % 4
@@ -110,9 +79,6 @@ function drawCard(letter, n, ctx) {
   ctx.font = "140px Arial";
   let letterInfo = ctx.measureText(letter)
   ctx.fillText(letter, (x + 0.5) * GLOB.cardWidth - letterInfo.width / 2, (y + 0.333) * GLOB.cardHeight /*- 140 / 5*/ );
-
-  //drawCardNet(cardInfo, ctx)
-
 
   // draw morse dots and dashes
   let morseDef = GLOB.morse[letter][0]
