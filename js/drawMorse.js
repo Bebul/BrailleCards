@@ -75,7 +75,6 @@ function drawCard(letter, n, ctx) {
 
   // write the Letter TOP
   var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
   ctx.font = "140px Arial";
   let letterInfo = ctx.measureText(letter)
   ctx.fillText(letter, (x + 0.5) * GLOB.cardWidth - letterInfo.width / 2, (y + 0.333) * GLOB.cardHeight /*- 140 / 5*/ );
@@ -110,7 +109,6 @@ function drawCard(letter, n, ctx) {
 
   // draw the mnemo text
   var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
   ctx.font = "bold 32px Arial";
   let mnemo = GLOB.morse[letter][1]
   let textWidth = GLOB.cardWidth

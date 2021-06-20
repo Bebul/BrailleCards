@@ -1,0 +1,42 @@
+<html xml:lang="cs" xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+    <title>Fort Mills Braille Cards</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style/layout.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="style/layout.css"/>
+
+    <script type="text/javascript" src="js/drawBraille.js"></script>
+
+    <script>
+      function drawIt() {
+        var canvas = document.getElementById("page1-back")
+        drawPage("ABCDEFGHIJKL".split(""), canvas)
+
+        var canvas2 = document.getElementById("page1-front")
+        drawFrontPage(canvas2)
+
+        var canvas3 = document.getElementById("page2-back")
+        drawPage("MNOPRSTUVXYZ".split(""), canvas3)
+
+        var canvas4 = document.getElementById("page2-front")
+        drawFrontPage(canvas4)
+      }
+    </script>
+</head>
+
+<body style="position:absolute" onload="drawIt()">
+
+<div style="visibility: hidden">
+    <img id="img-foreground" src="foreground.png" width="262px" height="494px">
+    <img id="img-background" src="background.png" width="262px" height="494px">
+</div>
+
+<div style="position:absolute; left:0px; top:0px">
+    <canvas id="page1-back" width="1050" height="1485"></canvas>
+    <canvas id="page1-front" width="1050" height="1485"></canvas>
+    <canvas id="page2-back" width="1050" height="1485"></canvas>
+    <canvas id="page2-front" width="1050" height="1485"></canvas>
+</div>
+</body>
+
+</html>
