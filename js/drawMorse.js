@@ -4,7 +4,7 @@ var GLOB = {
   cardWidth: 1050/4,
   cardHeight: 1485/3,
   netStyleDash: [5, 15],
-  morse: {
+  morse1: {
     A : [".-", "AKÁT"],
     B : ["-...", "BLÝSKAVICE"],
     C : ["-.-.", "CÍLOVNÍCI"],
@@ -32,6 +32,36 @@ var GLOB = {
     X : ["-..-", "XÉNOKRATÉS"],
     Y : ["-.--", "ÝGAR MÁVÁ"],
     Z : ["--..", "ZNÁMÁ ŽENA"]
+  },
+  morse: {
+    A  : ["...","AMULET"],
+    B  : ["---","BÍLÁ HŮL"],
+    C  : ["..-","CELOFÁN"],
+    D  : ["-","DRÁT"],
+    E  : [".--","ELFÍ PLÁŠŤ"],
+    F  : ["..--","FALEŠNÝ KNÍR"],
+    G  : [".-.","GUMÁKY"],
+    H  : ["...-","HRST OŘECHŮ"],
+    CH : ["-..-","CHRÁPADELNÍK"],
+    I  : ["..-.","INSTANTNÍ MED"],
+    J  : ["---.","JÍZDNÍ ŘÁDY"],
+    K  : [".-","KŘÍDA"],
+    L  : ["-...","LÁHEV RUMU"],
+    M  : ["-.-.","MÁTOVÝ ČAJ"],
+    N  : ["-.-","NÁDOBÍ"],
+    O  : [".-..","OSLÍ OCAS"],
+    P  : [".--.","PAVÍ PÉRO"],
+    Q  : ["-.","QVÉČKO"],
+    R  : [".-","RUČNÍK"],
+    S  : ["-..","SVÍTILNA"],
+    T  : ["..","TURBAN"],
+    U  : ["--..","ÚSTNÍ VODA"],
+    V  : ["-.--","VÁLEČNÝ KŘÍŽ"],
+    W  : [".","WRH"],
+    X  : [".-.-","X KRÁT KVADRÁT"],
+    Y  : ["....","YETIHO ZUB"],
+    Z  : [".---","ZRAJÍCÍ SÝR"]
+    //bedna.org, bednářské listy 2003: Ručník, ústní voda, hrst ořechů, instatní med, zrající sýr, mátový čaj, láhev rumu, nádobí, celofán, drát, křída, svítilna, jízdní řády, turban gumáky, bílá hůl, amulet, válečný kříž, falešný knír, oslí ocas, paví péro, elfí plášť a Yettiho zub.
   }
 }
 
