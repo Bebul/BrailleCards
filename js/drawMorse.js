@@ -1,8 +1,8 @@
 var GLOB = {
-  canvasWidth: 1050,
-  canvasHeight: 1485,
-  cardWidth: 1050/4,
-  cardHeight: 1485/3,
+  canvasWidth: 2100,
+  canvasHeight: 2969,
+  cardWidth: 2100/4,
+  cardHeight: 2969/3,
   netStyleDash: [5, 15],
   morseOriginal: {
     A : [".-", "AKÁT"],
@@ -75,7 +75,7 @@ function drawCard(letter, n, ctx) {
 
   // write the Letter TOP
   var canvas = document.getElementById("myCanvas");
-  ctx.font = "140px Arial";
+  ctx.font = "280px Arial";
   let letterInfo = ctx.measureText(letter)
   ctx.fillText(letter, (x + 0.5) * GLOB.cardWidth - letterInfo.width / 2, (y + 0.333) * GLOB.cardHeight /*- 140 / 5*/ );
 
@@ -109,10 +109,10 @@ function drawCard(letter, n, ctx) {
 
   // draw the mnemo text
   var canvas = document.getElementById("myCanvas");
-  ctx.font = "bold 32px Arial";
+  ctx.font = "bold 64px Arial";
   let mnemo = GLOB.morse[letter][1]
   let textWidth = GLOB.cardWidth
-  let fontPx = 36
+  let fontPx = 65
   while (textWidth > 0.95 * GLOB.cardWidth) {
     fontPx -= 1
     ctx.font = "bold " + fontPx + "px Arial";

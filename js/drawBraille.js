@@ -1,8 +1,8 @@
 var GLOB = {
-  canvasWidth: 1050,
-  canvasHeight: 1485,
-  cardWidth: 1050/4,
-  cardHeight: 1485/3,
+  canvasWidth: 2100,
+  canvasHeight: 2969,
+  cardWidth: 2100/4,
+  cardHeight: 2969/3,
   netStyleDash: [5, 15],
   braille: {
     A : "o     ",
@@ -98,7 +98,7 @@ function drawCard(letter, n, ctx) {
 
   // write the Letter below the dots
   var canvas = document.getElementById("myCanvas");
-  ctx.font = "140px Arial";
+  ctx.font = "280px Arial";
   let letterInfo = ctx.measureText(letter)
   let heightLeft = GLOB.cardHeight - (cardInfo.y + 1.5 * cardInfo.width)
   ctx.fillText(letter, (x + 0.5) * GLOB.cardWidth - letterInfo.width / 2, (y + 1) * GLOB.cardHeight - 140 / 5 );
